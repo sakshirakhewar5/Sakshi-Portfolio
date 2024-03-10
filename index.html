@@ -276,12 +276,13 @@
         <form action="https://api.web3forms.com/submit" method="POST">
             <div class="input-box ">
                 <input type="hidden" name="access_key" value="ed2b14e6-082f-4d18-a094-c19d04cc4bae">
-                <input type="text " name="Name" placeholder="Full Name " required>
-                <input type="email " name="Email" placeholder="Email Address " required>
+                <input type="text" name="Name" placeholder="Full Name" pattern="[A-Za-z\s]+$" title="Please enter a valid full name" required>
+                <input type="email" name="Email" placeholder="Email Address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" required>
             </div>
             <div class="input-box ">
-                <input type="number " name="Number" placeholder="Mobile Number " required>
-                <input type="text " name="Email_Subject" placeholder="Email Subject " required>
+                <input type="tel" name="Number" placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+                <input type="text" name="Email_Subject" placeholder="Email Subject" pattern="^[A-Za-z0-9\s]+$" title="Please enter a valid email subject (only letters, numbers, and spaces)" required>
+
             </div>
             <textarea name="Message" id=" " cols="30 " rows="10 " placeholder="your Message " required></textarea>
             <button type="submit " value="Send Message " class="btn ">Send Message</button>
